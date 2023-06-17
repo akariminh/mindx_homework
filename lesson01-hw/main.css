@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#myForm {
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+.user-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+button {
+    text-transform: uppercase;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#users {
+    margin-top: 30px;
+}
