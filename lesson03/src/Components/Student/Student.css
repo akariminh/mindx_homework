@@ -1,0 +1,18 @@
+li {
+    list-style-type: none;
+}
+.student {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 0.5em;
+    max-width: 300px;
+}
+
+.math {
+    color:black;
+}
+
+.student-name {
+    text-transform: uppercase;
+    font-size: 20px;
+}

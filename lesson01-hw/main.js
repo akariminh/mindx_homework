@@ -1,4 +1,5 @@
 
+// Bai tap 1
 function reverseArray(str) {
     let arr = str.split("");
     const reversedStr = arr.reverse().join("");
@@ -17,7 +18,7 @@ function difference(arr1, arr2) {
     }
     return result;
 }
-
+// Bai tap 2
 function findIndex1(arr, findNumber) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === findNumber) {
@@ -104,7 +105,7 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
 const errorMessage = document.querySelector('.form-message')
 
 
-submit.addEventListener("click", function addToList(e) {
+submit.addEventListener("click", (e) => {
     const inputName = document.getElementById("name").value;
     const inputPhoneNumber = document.getElementById("phone").value;
     if (!inputName.trim() || !inputPhoneNumber.trim()) {
