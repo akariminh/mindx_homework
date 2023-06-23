@@ -1,17 +1,21 @@
-import TaskInput from './TaskInput.js'
-import AddBtn from "./AddBtn.js"
+import Form from "./Form.js"
 import TaskStt from "./TaskStt.js"
 import TaskList from "./TaskList.js"
+import React from "react"
 
-const Table = () =>{
+
+const Table = ({ todos, setTodos, setInputText, inputText }) => {
+
     return (
         <div className="container">
-            <form className="my-form">
-            <TaskInput />
-            <AddBtn />
-            </form>
+            <Form 
+            className="my-form" 
+            todos={todos} 
+            setTodos={setTodos} 
+            setInputText={setInputText} 
+            inputText={inputText} />
             <TaskStt />
-            <TaskList />
+            <TaskList todos={todos}/>
         </div>
     )
 }

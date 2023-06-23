@@ -1,6 +1,6 @@
-const AddBtn = () => {
+const AddBtn = ({submitTodoHandler}) => {
     return(
-    <button className="btn">Add</button>
+    <button className="btn"  onClick={submitTodoHandler}>Add</button>
     )
 }
 

@@ -1,10 +1,11 @@
 
 import Icon from "./Icon.js";
-const TaskItem = (props) => {
-    const { id, title, isCompleted, color } = props;
+
+const TaskItem = ({todos}) => {
+    const { key, title, isCompleted, color } = todos;
     return (
-        <div className="task-item">
-        <span type={isCompleted}>{title}</span>
+        <div className={"task-item "+color}>
+        <span id={key} type={isCompleted}>{title}</span>
         <Icon />
         </div>
     )
