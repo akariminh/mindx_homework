@@ -16,9 +16,13 @@ a:visited {
 body {
   background-color: #003950;
   font-size: .9rem;
-  font-family: sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   padding: 80px 0;
   position: relative;
+}
+
+.root {
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .container {
@@ -30,6 +34,11 @@ body {
   text-align: center;
   width: 80%;
   background-color: #0000004d;
+}
+
+form {
+  font-family: 'Nunito Sans', sans-serif;
+  ;
 }
 
 .my-form {
@@ -46,13 +55,15 @@ body {
   outline: none;
   padding: 13px 20px;
   border-radius: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+
 }
 
 .toggle {
   display: inline-block;
   position: relative;
-  right: -80%;
-  bottom: 280px;
+  left: 100px;
+  bottom: 20px;
   height: 45px;
   width: 90px;
   border-radius: 99em;
@@ -117,6 +128,8 @@ body {
   transition: all .3s ease;
   background-color: var(--primary-color);
   cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+
 }
 
 .btn.active {
@@ -135,32 +148,59 @@ body {
 }
 
 .list-wrapper .default {
-background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
-.list-wrapper .red{
+
+.list-wrapper .red {
   background-color: #EB1313;
 }
-.list-wrapper .green{
+
+.list-wrapper .green {
   background-color: #4caf50;
 }
-.list-wrapper .blue{
+
+.list-wrapper .blue {
   background-color: #607d8b;
 }
-.list-wrapper .white{
+
+.list-wrapper .white {
   background-color: #eee;
 }
 
 .task-item {
   display: flex;
-  align-items: center;
+  flex: 1 1;
   justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 20px 5px 30px;
+  border-radius: 10px;
 }
 
-.icon{
+
+.icon {
   width: 40px;
-  height: 40px
+  height: 40px;
+  transition: .7s;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
 }
-.icon img{
-  width:100%;
-  overflow: hidden;
+
+
+
+.icon-list {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover {
+  background-color: #0000004d;
+  color: #fff;
+  border-radius: 10%;
 }

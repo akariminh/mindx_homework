@@ -1,17 +1,28 @@
-import TaskInput from './TaskInput.js'
-import AddBtn from "./AddBtn.js"
+import Form from "./Form.js"
 import TaskStt from "./TaskStt.js"
 import TaskList from "./TaskList.js"
+import { useState } from 'react';
 
-const Table = () =>{
+
+const Table = () => {
+    const [todos, setTodos] = useState([]);
+    const [inputText, setInputText] = useState("");
+    const onAddNewTodoHandler = (newTodo) => {
+      setTodos([...todos, newTodo ]);
+      console.log(todos);
+  }
+
     return (
         <div className="container">
-            <form className="my-form">
-            <TaskInput />
-            <AddBtn />
-            </form>
+            <Form
+                className="my-form"
+                todos={todos}
+                setTodos={setTodos}
+                setInputText={setInputText}
+                inputText={inputText} 
+                onAddTodo={onAddNewTodoHandler}/>
             <TaskStt />
-            <TaskList />
+            <TaskList todos={todos}/>
         </div>
     )
 }
