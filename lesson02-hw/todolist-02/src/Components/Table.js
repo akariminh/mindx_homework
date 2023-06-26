@@ -11,6 +11,9 @@ const Table = () => {
       setTodos([...todos, newTodo ]);
       console.log(todos);
   }
+//   const onRemoveTaskHandler = (e) => {
+//     return console.log(e)
+// }
 
     return (
         <div className="container">
@@ -22,7 +25,7 @@ const Table = () => {
                 inputText={inputText} 
                 onAddTodo={onAddNewTodoHandler}/>
             <TaskStt />
-            <TaskList todos={todos}/>
+            <TaskList todos={todos} setTodos={setTodos}/>
         </div>
     )
 }
