@@ -1,5 +1,6 @@
 import AddBtn from "./AddBtn.js"
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Form = ({ setInputText, inputText, onAddTodo }) => {
     const inputTextHandler = (e) => {
@@ -8,7 +9,7 @@ const Form = ({ setInputText, inputText, onAddTodo }) => {
     const onSubmitTodoHandler = (e) => {
         e.preventDefault();
         const newTodo = {
-            id: Math.random() * 100,
+            id: uuidv4(),
             title: inputText,
             isCompleted: false,
             color: "default"
