@@ -1,9 +1,9 @@
 import Student from "./Student/Student";
 
 const StudentTable = (props) => {
-  const { studentList, onDeleteHandler } = props;
+  const { studentList, onDeleteHandler, onOpenUpdateStudentModal } = props;
   const renderStudentList = studentList.map((student, index) => {
-    return <Student student={student} index={index} onDeleteHandler={onDeleteHandler} />;
+    return <Student student={student} index={index} onDeleteHandler={onDeleteHandler} onOpenUpdateStudentModal ={onOpenUpdateStudentModal } />;
   });
   return (
     <div className="student-list">

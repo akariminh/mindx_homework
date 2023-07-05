@@ -7,6 +7,7 @@ import { FILTER_OPTIONS } from "../../utils/constants.js";
 const StudentManagement = () => {
   const [studentList, setStudentList] = useState([]);
   const [sortOption, setSortOption] = useState(FILTER_OPTIONS.DEFAULT);
+  const [editingStudent, setEditingStudent] = useState({});
   const onSubmitStudent = (student) => {
     const newStudent = {
       ...student,
@@ -62,10 +63,31 @@ const StudentManagement = () => {
     return sortedStudentList;
   };
   const sortedStudentValues = sortStudentList(studentList, sortOption);
+  // Update Student
+
+  const onOpenUpdateStudentModal  = (id) => {
+    // Search id để tìm student
+    const existingStudent = studentList.find((student) => 
+    student.id === id);
+    // Assign value cho student nếu tìm ra, nếu ko assign thì back lại
+    if (!existingStudent) return; 
+    else {setEditingStudent(existingStudent)};
+  }
+  const updateStudentHandlder = (updatedStudent) => {
+    // Tìm và thay thế trong studentList giá trị vừa được update
+    setStudentList(studentList.map((student) => {
+      if (student.id === updatedStudent.id) {
+        return updatedStudent;
+      }
+      else return student;
+    }))
+    setEditingStudent({});
+  }
   return (
     <div className="container">
       <h1>Dự án quản lý học sinh</h1>
-      <Form onSubmitStudent={onSubmitStudent} />
+      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStudentForm">Thêm mới học sinh</button>
+      <Form onSubmitStudent={onSubmitStudent}  onUpdateStudent={updateStudentHandlder} initialValues={editingStudent} />
       <div className="d-flex align-items-center justify-content-end gap-2 my-3">
         <select
           className="form-select"
@@ -83,6 +105,7 @@ const StudentManagement = () => {
         <StudentTable
           studentList={sortedStudentValues}
           onDeleteHandler={onDeleteHandler}
+          onOpenUpdateStudentModal ={onOpenUpdateStudentModal }
         />
       </div>
     </div>

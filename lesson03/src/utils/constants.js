@@ -7,3 +7,8 @@ export const FILTER_OPTIONS = {
     A_TO_Z: "aToZ",
     Z_TO_A: "zToA"
 }
+
+export const FORM_MODE = {
+    CREATE: "create",
+    UPDATE: "update"
+}
