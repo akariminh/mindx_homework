@@ -1,27 +1,25 @@
-const TaskItem = ({setTodos, todos, id, title, isCompleted, color, todo }) => {
-    const onRemoveTaskHandler = () => {
-        setTodos(todos.filter((clickedTodo) => clickedTodo.id !== todo.id))
-    }
+const TaskItem = ({todo, onRemoveTaskHandler, onOpenUpdateTaskHandler }) => {
+    const { id, task, isCompleted, color } = todo || {};
     return (
-        <div className={"task-item " + color}>
-            <p id={id} type={isCompleted}>{title}</p>
+        <div className={"task-item " + color + (isCompleted ? " completed" : "")} >
+            <p>{task}</p>
             <div className="icon-list">
-                <div className="icon">
+                <button className="icon">
                     <i className="fa-regular fa-square">
                     </i>
-                </div>
-                <div className="icon" onClick={onRemoveTaskHandler}>
+                </button>
+                <button className="icon" onClick={() => onRemoveTaskHandler(id)}>
                     <i className="fa-solid fa-trash-can">
                     </i>
-                </div>
-                <div className="icon">
+                </button>
+                <button className="icon" onClick={() => onOpenUpdateTaskHandler (id)}>
                     <i className="fa-solid fa-pen">
                     </i>
-                </div>
-                <div className="icon">
+                </button>
+                <button className="icon">
                     <i className="fa-solid fa-palette">
                     </i>
-                </div>
+                </button>
 
             </div>
         </div>

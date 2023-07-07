@@ -2,18 +2,13 @@
 import TaskItem from './TaskItem.js'
 
 
-const TaskList = ({todos, setTodos}) => {
-    const taskListRender = todos.map((todo) => {
-       const { id, title, isCompleted, color } = todo;
+const TaskList = ({todoList, onOpenUpdateTaskHandler, onRemoveTaskHandler}) => {
+    const taskListRender = todoList.map((todo) => {
         return (
             <TaskItem 
-            id={id}
-            title={title} 
-            isCompleted={isCompleted} 
-            color={color}
             todo={todo}
-            todos={todos}
-            setTodos={setTodos}
+            onOpenUpdateTaskHandler={onOpenUpdateTaskHandler}
+            onRemoveTaskHandler={onRemoveTaskHandler} 
             />
         );
     });

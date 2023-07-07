@@ -47,18 +47,18 @@ const Form = (props) => {
     setFormMode(FORM_MODE.CREATE);
   };
   return (
-    <div className="modal fade" tabindex="-1" id="addStudentForm">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5">
+    <div className="modal fade" tabIndex="-1" id="addStudentForm">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h1 className="modal-title fs-5">
               {formMode === FORM_MODE.CREATE
                 ? "Thêm mới học sinh"
                 : "Cập nhật học sinh"}
             </h1>
             <button
               type="button"
-              class="btn-close"
+              className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
@@ -130,10 +130,10 @@ const Form = (props) => {
                   name="chem"
                 />
               </div>
-              <div class="modal-footer">
+              <div className="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  className="btn btn-secondary"
                   data-bs-dismiss="modal"
                 >
                   Đóng
