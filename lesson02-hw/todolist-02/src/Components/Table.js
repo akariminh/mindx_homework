@@ -14,8 +14,8 @@ const Table = () => {
   const onOpenUpdateTaskHandler = (id) => {
     // filter ra todo cần sửa
     const existingTodos = todoList.find((todo) => todo.id === id);
-    if (existingTodos) {setEditingTodo(existingTodos)}
-    else return;
+    if (!existingTodos) return;
+    else {setEditingTodo(existingTodos)};
     console.log(editingTodo)
   };
   const updateTask = (updatedTodo) => {
