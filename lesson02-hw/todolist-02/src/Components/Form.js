@@ -10,9 +10,7 @@ const Form = ({ initialValues, onAddTodo, updateTask }) => {
   useEffect(() => {
     const hasInitialValues =
       initialValues.id &&
-      initialValues.task &&
-      initialValues.isCompleted &&
-      initialValues.color;
+      initialValues.task
     if (hasInitialValues) {
       console.log(initialValues);
       setTodo(initialValues);

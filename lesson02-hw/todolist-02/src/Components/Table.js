@@ -16,14 +16,15 @@ const Table = () => {
     const existingTodos = todoList.find((todo) => todo.id === id);
     if (!existingTodos) return;
     else {setEditingTodo(existingTodos)};
-    console.log(editingTodo)
   };
   const updateTask = (updatedTodo) => {
     setTodoList(todoList.map((todo) => {
       if (todo.id === updatedTodo.id) {
         return updatedTodo;
       } else return todo;
-    }))
+    })
+    );
+    setEditingTodo({})
   }
   const onRemoveTaskHandler = (id) => {
     const filteredTodos = todoList.filter((todo) => todo.id !== id);
