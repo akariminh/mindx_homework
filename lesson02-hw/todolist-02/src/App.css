@@ -207,6 +207,14 @@ form {
   border-radius: 10%;
 }
 
-.task-item .completed {
+.completed {
+  font-style: italic;
+  opacity: .5;
+}
+.completed p{
   text-decoration: line-through;
+}
+.stt .active {
+  background-color: #00e4ff;
+  color: #222;
 }

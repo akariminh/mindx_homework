@@ -2,13 +2,14 @@
 import TaskItem from './TaskItem.js'
 
 
-const TaskList = ({todoList, onOpenUpdateTaskHandler, onRemoveTaskHandler}) => {
+const TaskList = ({todoList, onOpenUpdateTaskHandler, onRemoveTaskHandler, onUpdateSttHandler}) => {
     const taskListRender = todoList.map((todo) => {
         return (
             <TaskItem 
             todo={todo}
             onOpenUpdateTaskHandler={onOpenUpdateTaskHandler}
             onRemoveTaskHandler={onRemoveTaskHandler} 
+            onUpdateSttHandler={onUpdateSttHandler}
             />
         );
     });

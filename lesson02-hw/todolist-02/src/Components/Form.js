@@ -4,7 +4,6 @@ import { FORM_MODE } from "../utils/constants.js";
 
 const Form = ({ initialValues, onAddTodo, updateTask }) => {
   const [formMode, setFormMode] = useState(FORM_MODE.CREATE);
-  // const [inputText, setInputText] = useState("");
   const [todo, setTodo] = useState([]);
   const initialState = {task: ""};
   useEffect(() => {
@@ -44,7 +43,7 @@ const Form = ({ initialValues, onAddTodo, updateTask }) => {
         onChange={inputTextHandler}
       />
       <button className="btn" type="submit">
-        {FORM_MODE.CREATE ? "Add" : "Update"}
+        {formMode === FORM_MODE.CREATE ? "Add" : "Update"}
       </button>
     </form>
   );

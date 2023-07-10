@@ -1,14 +1,14 @@
-
+import logo from './logo.svg';
 import './App.css';
-import MyApp from './contexts/MyApp';
-import FirstComp from './components/FirstComp';
+
 function App() {
-  const message = "hello, sample test has successfully run"
   return (
-    <MyApp.Provider value={{text: message}}>
-      <div className="App">
+    <div className="App">
       <header className="App-header">
-        <FirstComp/>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,8 +19,6 @@ function App() {
         </a>
       </header>
     </div>
-    </MyApp.Provider>
-    
   );
 }
 
