@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <h1>Welcome! </h1>
       <ul className="nav-bar">
-        <li>Main</li>
+        <li><Link to="/">Main</Link></li>
         <li>
           <Link to="/signup">Sign-up</Link>
         </li>
