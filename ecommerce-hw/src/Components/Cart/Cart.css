@@ -1,0 +1,70 @@
+.cart {
+    position: fixed;
+    width: 450px;
+    right: 0px;
+    top: 0px;
+}
+.cart-title {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.cart-title h4 {
+    font-size: 1em;
+}
+.cart-icon {
+    position: absolute;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    background-color: #1b1a20;
+    color: #ececec;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 8px;
+}
+
+.cart-content {
+    background-color: #1B1A20;
+    color: #ececec;
+    text-align: center;
+    width: 400px;
+
+}
+.cart-content .cart-title {
+    padding: 45px 0px;
+    font-size: 1.5rem;
+    
+}
+.cart-item-list {
+    position: relative;
+    min-height: 280px;
+    padding-bottom: 200px;
+}
+.checkout-section {
+    padding: 5%;}
+.fee-checkout {
+    display: flex;
+    justify-content: space-between;
+}
+.cart .my-btn {
+    background-color: #0C0B10;
+    color: #fff;
+    padding: 15px 0px;
+    margin-top: 40px;    
+    cursor: pointer;
+    width: 100%;
+    border: 0px;
+    transition: background-color 0.2s ease 0s;
+    font-family: "Fira Sans", sans-serif;
+    text-transform: uppercase;
+
+
+}
+
+.my-btn:hover {
+    background-color: #EABF00;
+}

@@ -1,8 +1,7 @@
-import React from "react";
-
+import './CartItem.css'
 const CartItem = () => {
   return (
-    <div classname="cart-item">
+    <div className="cart-item">
         <div className="display-product">
           <div className="checkout-image">
             <div className="checkout-image-container">

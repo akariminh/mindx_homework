@@ -1,0 +1,79 @@
+.product-card{
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    cursor: default;
+    outline: none;
+}
+
+.img-container {
+    height: 320px;
+    width: 240px;
+    overflow: hidden;
+
+}
+.img-container img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.img-container:hover {
+    cursor: pointer;
+  }
+.img-after {
+    z-index: 1000;
+    visibility: hidden;
+}
+.free-shipping {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    font-size: 0.6em;
+    z-index: 10;
+    color: #ececec;
+    background-color: #1B1A20;
+}
+
+.product-name {
+    position: relative;
+    padding: 20px;
+    height: 45px;
+    text-transform: capitalize;
+}
+.price-display {
+    margin: 1rem;
+
+}
+.price {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.product-name:before {
+    background-color: #EABF00;
+    content: "";
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -10px;
+}
+.my-btn {
+    background-color: #1B1A20;
+    color: #fff;
+    padding: 15px 0px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    border: 0px;
+    transition: background-color 0.2s ease 0s;
+    font-family: "Fira Sans", sans-serif;
+
+}
+
+.my-btn:hover {
+    background-color: #EABF00;
+}
