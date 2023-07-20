@@ -1,0 +1,75 @@
+.display-product {
+    padding: 5%;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+
+}
+.checkout-image-container {
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0 10px;
+}
+.checkout-image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.checkout-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    font-size: 18px;
+}
+
+.checkout-price {
+    color: var(--primary-color);
+    text-decoration: none;
+    width: 20%;
+    text-align: right;
+    color: #eabf00;
+    font-size: 18px;
+}
+.function-btn {
+    width: 16px;
+    height: 16px;
+    top: 15px;
+    right: 5%;
+    border-radius: 50%;
+    position: absolute;
+    background-size: auto 100%;
+    cursor: pointer;
+    border: 0px;
+    background: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.2s ease 0s;
+
+}
+
+.function-btn:hover {
+    color: #ececec;
+}
+
+.increase-decrease-handler {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.increase-decrease-handler .function-btn {
+    position: static;
+}
+
+.function-btn.inactive {
+    visibility: hidden;
+}

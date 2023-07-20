@@ -16,11 +16,38 @@ function App() {
         ...productsList.find((product) => product.id === id),
         quantity: 1,
       };
-      setCart(...cart, newCartItem);
+      setCart([...cart, newCartItem]);
     } else {
-      const revisedCartItem = {...addedProduct, quantity: 2}
-      setCart(...cart, revisedCartItem);
+      const updatedCart = updatingCart(addedProduct);
+      setCart([...updatedCart]);
     }
+  };
+
+  const updatingCart = (updatedProduct) =>
+    cart.map((product) => {
+      if (product.id === updatedProduct.id) {
+        updatedProduct.quantity += 1;
+        return updatedProduct;
+      } else return product;
+    });
+  const deleteProductHandler = (id) => {
+    const updatedCart = cart.filter((product) => product.id !== id);
+    setCart(updatedCart);
+  };
+  const increaseProductHandler = (id) => {
+    const selectedProduct = cart.find((product) => product.id === id);
+    const updatedCart = updatingCart(selectedProduct);
+    setCart([...updatedCart]);
+  };
+  const decreaseProductHandler = (id) => {
+    const selectedProduct = cart.find((product) => product.id === id);
+    const updatedCart = cart.map((product) => {
+      if (product.id === selectedProduct.id && selectedProduct.quantity > 1) {
+        selectedProduct.quantity -= 1;
+        return selectedProduct;
+      } else return product;
+    });
+    setCart([...updatedCart]);
   };
   return (
     <div className="column-wrapper">
@@ -29,7 +56,12 @@ function App() {
         productsList={productsList}
         addProductToCart={addProductToCart}
       />
-      <Cart cart={cart} />
+      <Cart
+        cart={cart}
+        deleteProductHandler={deleteProductHandler}
+        decreaseProductHandler={decreaseProductHandler}
+        increaseProductHandler={increaseProductHandler}
+      />
     </div>
   );
 }
