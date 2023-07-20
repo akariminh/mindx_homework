@@ -1,14 +1,11 @@
-## Các chức năng cần làm:
----
+### E-commerce Project - Under Construction
 
-### Component tree:
-```
-< E-commerce >
-    <ProductFilter /> `state: [productList,setProductList]
-    <Product List />
-        <Product />
-    <Cart />
-        <CartItem />
-```
-1. Render product từ productList
-2. Add product vào cart -> check product đã exist ? quantity = 1 : quantity +
+## Chức năng đã hoàn thiện: 
+
+    - Render từ Mock Data
+    - Add product vào cart, render vào section Cart/Checkout
+    - Tăng, giảm số lượng sản phẩm trong cart 
+## Chức năng đang làm thêm:
+
+    - Toggle button để hide cart
+    - Filter section
